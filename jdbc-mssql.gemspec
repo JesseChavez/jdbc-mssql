@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['jesse.chavez.r@gmail.com']
 
   spec.summary       = %q{JDBC driver for Jruby and SQL Server}
-  spec.description   = %q{Pending ...}
+  spec.description   = %q{Loads the Microsoft SQL Server JDBC driver. Install this gem and require 'jdbc/mssql' within JRuby}
   spec.homepage      = 'https://github.com/JesseChavez/jdbc-mssql'
   spec.license       = 'MIT'
 
