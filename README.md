@@ -1,8 +1,7 @@
 # Jdbc::Mssql
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jdbc/mssql`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby gem loads the Microsoft SQL Server JDBC driver.
+Install this gem and `require 'jdbc/mssql'` within JRuby
 
 ## Installation
 
@@ -22,7 +21,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This is a very minimal and basic sample.
+
+```ruby
+require 'jdbc/mssql'
+
+connection_string = [
+  'jdbc:sqlserver://192.168.1.3:1433',
+  'database=sample_development',
+  'user=sa',
+  'password=sa_password'
+].join(';')
+
+connection = java.sql.DriverManager.getConnection(connection_string)
+
+statement = connection.createStatement
+
+sql_query = 'SELECT * FROM types'
+
+result = statement.executeQuery(sql_query)
+
+while result.next
+  puts [result.getString(1), result.getString(2), result.getString(3)]
+end
+```
+
+For more details follow Microsoft's documentation and JRuby conventions to call java methods.
 
 ## Development
 
