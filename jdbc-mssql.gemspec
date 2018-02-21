@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Loads the Microsoft SQL Server JDBC driver. Install this gem and require 'jdbc/mssql' within JRuby}
   spec.homepage      = 'https://github.com/JesseChavez/jdbc-mssql'
   spec.license       = 'MIT'
+  spec.platform      = 'java'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

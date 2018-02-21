@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jdbc-mssql (0.2.0)
+    jdbc-mssql (0.2.0-java)
 
 GEM
   remote: https://rubygems.org/
