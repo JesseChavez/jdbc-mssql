@@ -11,6 +11,8 @@ module Jdbc
 
       return 8 if version == '1.8'
 
+      return 9 if version == '9'
+
       nil
     end
 
