@@ -16,14 +16,28 @@ module Jdbc
       nil
     end
 
+    def self.driver_version(version)
+      return '6.4.0' if version == 7
+
+      return '7.0.0' if version == 8
+
+      return '6.4.0' if version == 9
+
+      return '7.0.0' if version == 10
+
+      nil
+    end
+
     def self.jar_file
-      "mssql-jdbc-#{DRIVER_VERSION}.jre#{jre_version}.jar"
+      "mssql-jdbc-#{driver_version(jre_version)}.jre#{jre_version}.jar"
     end
 
     def self.load_driver
       warn 'loading JDBC driver on require "jdbc/mssql"' if $VERBOSE
 
-      raise 'No JDBC driver for your java version' if jre_version.nil?
+      if jre_version.nil? || driver_version.nil?
+        raise 'No JDBC driver for your java version'
+      end
 
       require jar_file
     end
