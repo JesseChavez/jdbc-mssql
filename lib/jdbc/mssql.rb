@@ -4,32 +4,34 @@ require 'jdbc/mssql/version'
 
 module Jdbc
   module Mssql
-    def self.jre_version
-      version = ENV_JAVA['java.specification.version']
+    JAVA_VERSIONS = {
+      '1.7' => 7,
+      '1.8' => 8,
+      '9'   => 9,
+      '10'  => 10
+    }.freeze
 
-      return 7 if version == '1.7'
+    JAVA_DRIVER_VERSIONS = {
+      '1.7' => '6.4.0',
+      '1.8' => '7.0.0',
+      '9'   => '6.4.0',
+      '10'  => '7.0.0'
+    }.freeze
 
-      return 8 if version == '1.8'
-
-      return 9 if version == '9'
-
-      nil
+    def self.java_specification_version
+      ENV_JAVA['java.specification.version']
     end
 
-    def self.driver_version(version)
-      return '6.4.0' if version == 7
+    def self.jre_version
+      JAVA_VERSIONS[java_specification_version]
+    end
 
-      return '7.0.0' if version == 8
-
-      return '6.4.0' if version == 9
-
-      return '7.0.0' if version == 10
-
-      nil
+    def self.driver_version
+      JAVA_DRIVER_VERSIONS[java_specification_version]
     end
 
     def self.jar_file
-      "mssql-jdbc-#{driver_version(jre_version)}.jre#{jre_version}.jar"
+      "mssql-jdbc-#{driver_version}.jre#{jre_version}.jar"
     end
 
     def self.load_driver
