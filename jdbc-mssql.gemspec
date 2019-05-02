@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Jesse Chavez']
   spec.email         = ['jesse.chavez.r@gmail.com']
 
-  spec.summary       = %q{JDBC driver for Jruby and SQL Server}
+  spec.summary       = %q{JDBC driver for JRuby and SQL Server / Azure SQL}
   spec.description   = %q{Loads the Microsoft SQL Server JDBC driver. Install this gem and require 'jdbc/mssql' within JRuby}
   spec.homepage      = 'https://github.com/JesseChavez/jdbc-mssql'
   spec.license       = 'MIT'
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'bundler', '~> 1.17.3'
+  spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
