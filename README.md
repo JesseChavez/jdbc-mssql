@@ -48,6 +48,26 @@ end
 
 For more details follow Microsoft's documentation and JRuby conventions to call java methods.
 
+## Supported Java versions
+
+For supported Java version use Gem versions as per below table:
+
+| Java version | Gem version   | used driver |
+| ------------ | ------------- | ----------- |
+| 8            | 0.7.0         | 7.4.1       |
+| 11           | 0.7.0         | 7.4.1       |
+
+## Other Java versions
+
+For other Java version use Gem versions as per below table:
+
+| Java version | Gem version   | used driver |
+| ------------ | ------------- | ----------- |
+| 7            | 0.6.0         | 6.4.0       |
+| 9            | 0.6.0         | 6.4.0       |
+| 10           | 0.6.0         | 7.0.0       |
+| 12           | 0.7.0         | 7.4.1       |
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

@@ -5,19 +5,13 @@ require 'jdbc/mssql/version'
 module Jdbc
   module Mssql
     JAVA_VERSIONS = {
-      '1.7' => 7,
       '1.8' => 8,
-      '9'   => 9,
-      '10'  => 10,
       '11'  => 11,
       '12'  => 12
     }.freeze
 
     JAVA_DRIVER_VERSIONS = {
-      '1.7' => '6.4.0',
       '1.8' => '7.4.1',
-      '9'   => '6.4.0',
-      '10'  => '7.0.0',
       '11'  => '7.4.1',
       '12'  => '7.4.1'
     }.freeze
