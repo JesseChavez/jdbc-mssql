@@ -7,13 +7,13 @@ module Jdbc
     JAVA_VERSIONS = {
       '1.8' => 8,
       '11'  => 11,
-      '12'  => 12
+      '13'  => 13
     }.freeze
 
     JAVA_DRIVER_VERSIONS = {
-      '1.8' => '7.4.1',
-      '11'  => '7.4.1',
-      '12'  => '7.4.1'
+      '1.8' => '8.2.1',
+      '11'  => '8.2.1',
+      '13'  => '8.2.1'
     }.freeze
 
     def self.java_specification_version
