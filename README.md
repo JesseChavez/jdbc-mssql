@@ -54,8 +54,8 @@ For supported Java version use Gem versions as per below table:
 
 | Java version | Gem version   | used driver |
 | ------------ | ------------- | ----------- |
-| 8            | 0.7.0         | 7.4.1       |
-| 11           | 0.7.0         | 7.4.1       |
+| 8            | 0.8.0         | 8.2.1       |
+| 11           | 0.8.0         | 8.2.1       |
 
 ## Other Java versions
 
@@ -67,6 +67,7 @@ For other Java version use Gem versions as per below table:
 | 9            | 0.6.0         | 6.4.0       |
 | 10           | 0.6.0         | 7.0.0       |
 | 12           | 0.7.0         | 7.4.1       |
+| 13           | 0.8.0         | 8.2.1       |
 
 ## Development
 
