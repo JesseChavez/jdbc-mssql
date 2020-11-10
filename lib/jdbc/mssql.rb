@@ -6,14 +6,14 @@ module Jdbc
   module Mssql
     JAVA_VERSIONS = {
       '1.8' => 8,
-      '11'  => 11,
-      '13'  => 13
+      '11' => 11,
+      '14' => 14
     }.freeze
 
     JAVA_DRIVER_VERSIONS = {
-      '1.8' => '8.2.1',
-      '11'  => '8.2.1',
-      '13'  => '8.2.1'
+      '1.8' => '8.4.1',
+      '11' => '8.4.1',
+      '14' => '8.4.1'
     }.freeze
 
     def self.java_specification_version
