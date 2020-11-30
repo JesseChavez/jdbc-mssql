@@ -21,6 +21,20 @@ RSpec.describe Jdbc::Mssql do
         expect(Jdbc::Mssql.driver_version).to eq(driver)
       end
     end
+
+    it 'should include major and minor from java Driver class' do
+      driver = com.microsoft.sqlserver.jdbc.SQLServerDriver.new
+      major = driver.get_major_version
+      minor = driver.get_minor_version
+
+      expect(Jdbc::Mssql.driver_version).to include("#{major}.#{minor}")
+    end
+
+    it 'should be included in driver version from java SQLServerDatabaseMetaData class' do
+      meta_data = com.microsoft.sqlserver.jdbc.SQLServerDatabaseMetaData.new(nil)
+
+      expect(meta_data.get_driver_version).to include(Jdbc::Mssql.driver_version)
+    end
   end
 
   context '.load_driver' do
