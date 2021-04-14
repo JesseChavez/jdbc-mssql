@@ -70,6 +70,19 @@ For other Java version use Gem versions as per below table:
 | 13           | 0.8.0         | 8.2.1       |
 | 14           | 0.9.0         | 8.4.1       |
 
+## Other usage
+
+This gem is commonly used with the `activerecord-jdbc-alt-adapter` gem
+
+For more information visit:
+
+- [activerecord-jdbc-alt-adapter](https://rubygems.org/gems/activerecord-jdbc-alt-adapter) gem.
+
+- [activerecord-jdbc-alt-adapter](https://github.com/JesseChavez/activerecord-jdbc-adapter) repository.
+
+- [wombat61](https://github.com/JesseChavez/wombat61) Rails 6.1 sample application.
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
