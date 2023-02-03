@@ -4,40 +4,34 @@ require 'jdbc/mssql/version'
 
 module Jdbc
   module Mssql
-    JAVA_VERSIONS = {
-      '1.8' => 8,
-      '11' => 11,
-      '14' => 14
-    }.freeze
-
-    JAVA_DRIVER_VERSIONS = {
-      '1.8' => '8.4.1',
-      '11' => '8.4.1',
-      '14' => '8.4.1'
-    }.freeze
-
     def self.java_specification_version
       ENV_JAVA['java.specification.version']
     end
 
     def self.jre_version
-      JAVA_VERSIONS[java_specification_version]
+      java_specification_version.split('.').last.to_i
     end
 
     def self.driver_version
-      JAVA_DRIVER_VERSIONS[java_specification_version]
+      '12.2.0'
+    end
+
+    def self.effective_jre_version
+      if jre_version >= 11
+        11
+      elsif jre_version == 8
+        8
+      end
     end
 
     def self.jar_file
-      "mssql-jdbc-#{driver_version}.jre#{jre_version}.jar"
+      "mssql-jdbc-#{driver_version}.jre#{effective_jre_version}.jar"
     end
 
     def self.load_driver
       warn 'loading JDBC driver on require "jdbc/mssql"' if $VERBOSE
 
-      if jre_version.nil? || driver_version.nil?
-        raise 'No JDBC driver for your java version'
-      end
+      raise 'No JDBC driver for your java version' unless jre_version > 7
 
       require jar_file
     end
