@@ -48,24 +48,25 @@ end
 
 For more details follow Microsoft's documentation and JRuby conventions to call java methods.
 
-## Supported Java versions
+## Supported versions
 
-For supported Java version use Gem versions as per below table:
+Supported Java version are 8, 11 or greater
 
-| Java version | Gem version   | used driver |
-| ------------ | ------------- | ----------- |
-| 8            | 0.8.0         | 8.2.1       |
-| 11           | 0.9.0         | 8.4.1       |
+Starting from driver version `12.2.0` gem follows same version as jdbc driver
 
-## Other Java versions
+## Old Gems versioning
 
-For other Java version use Gem versions as per below table:
+Do not use these versions unless you have to such as java 7, 9, or 10
+
+For use Gem versions as per below table:
 
 | Java version | Gem version   | used driver |
 | ------------ | ------------- | ----------- |
 | 7            | 0.6.0         | 6.4.0       |
+| 8            | 0.8.0         | 8.2.1       |
 | 9            | 0.6.0         | 6.4.0       |
 | 10           | 0.6.0         | 7.0.0       |
+| 11           | 0.9.0         | 8.4.1       |
 | 12           | 0.7.0         | 7.4.1       |
 | 13           | 0.8.0         | 8.2.1       |
 | 14           | 0.9.0         | 8.4.1       |
