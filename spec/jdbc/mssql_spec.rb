@@ -1,5 +1,5 @@
 RSpec.describe Jdbc::Mssql do
-  java_versions = ['1.8'] + ('11'..'19').to_a
+  java_versions = ['1.8'] + ('11'..'21').to_a
 
   it 'has a version number' do
     expect(Jdbc::Mssql::VERSION).not_to be nil
