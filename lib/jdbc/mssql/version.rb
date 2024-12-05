@@ -1,5 +1,5 @@
 module Jdbc
   module Mssql
-    VERSION = '12.2.0'.freeze
+    VERSION = '12.6.4'.freeze
   end
 end
