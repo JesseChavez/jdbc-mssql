@@ -30,7 +30,7 @@ jobs:
       - name: Set up JRuby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: jruby
+          ruby-version: jruby-9.4.14.0
 
       # Installing gems
       - name: Install dependencies
